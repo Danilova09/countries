@@ -8,6 +8,7 @@ import { NotFoundComponent } from './not-found.component';
 import { CountriesComponent } from './home/countries/countries.component';
 import { CountryItemComponent } from './home/countries/country-item/country-item.component';
 import { CountryDetailsComponent } from './home/country-details/country-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CountryDetailsComponent } from './home/country-details/country-details.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Country } from '../../../shared/country.model';
 
 @Component({
@@ -6,12 +6,7 @@ import { Country } from '../../../shared/country.model';
   templateUrl: './country-item.component.html',
   styleUrls: ['./country-item.component.css']
 })
-export class CountryItemComponent implements OnInit {
+export class CountryItemComponent {
   @Input() country!: Country;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

@@ -1,1 +1,3 @@
-<a href="#" class="list-group-item list-group-item-action">{{ country.name }}</a>
+<a class="list-group-item list-group-item-action"
+   [routerLink]="['country', country.alpha3Code]"
+   routerLinkActive="list-group-item-primary">{{ country.name }}</a>

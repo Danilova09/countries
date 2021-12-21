@@ -1,7 +1,14 @@
-<div class="card mx-5">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg" class="card-img-top" alt="...">
+<div *ngIf="isFetchingCountryDetails" class="mt-5 d-flex justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+<div class="card mx-5" *ngIf="!isFetchingCountryDetails">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <h5 class="card-title">{{ countryDetails.name }}</h5>
+    <p>capital: {{ countryDetails.capital }}</p>
+    <p>region: {{ countryDetails.region }}</p>
+    <p>subregion: {{ countryDetails.subregion }}</p>
+    <p>population: {{ countryDetails.population }}</p>
   </div>
 </div>

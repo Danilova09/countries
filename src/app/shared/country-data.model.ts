@@ -5,5 +5,6 @@ export class CountryData {
     public population: number,
     public region: string,
     public subregion: string,
+    public alpha3Code: string,
   ) {}
 }

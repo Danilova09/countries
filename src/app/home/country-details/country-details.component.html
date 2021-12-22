@@ -4,6 +4,8 @@
   </div>
 </div>
 <div class="card mx-5" *ngIf="!isFetchingCountryDetails">
+  <img src="http://146.185.154.90:8080/restcountries/data/{{ countryDetails.alpha3Code.toLocaleLowerCase() }}.svg"
+       class="card-img-top" alt="{{ countryDetails.name }}">
   <div class="card-body">
     <h5 class="card-title">{{ countryDetails.name }}</h5>
     <p>capital: {{ countryDetails.capital }}</p>

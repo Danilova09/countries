@@ -41,7 +41,7 @@ export class CountryService {
     return this.http.get<CountryData>(`http://146.185.154.90:8080/restcountries/rest/v2/alpha/${alphaCode}`)
       .pipe(map(result => {
         this.isFetchingCountryChange.next(false);
-        return new CountryData(result.name, result.capital, result.population, result.region, result.subregion);
+        return new CountryData(result.name, result.capital, result.population, result.region, result.subregion, result.alpha3Code);
       }));
   }
 
